@@ -9,11 +9,52 @@
    let choiceArray = ["rock", "paper","scissors"]
    let randomIndex = Math.floor(Math.random() * choiceArray.length); 
    let randomElement = choiceArray[randomIndex];
+   console.log(randomElement);
    return randomElement
  }
+    
  function playRound(playerSelection, computerSelection){
- }
-    console.log(computerPlay())
+   console.log(computerSelection +  " " + playerSelection)
+   let winner
+   if (playerSelection == computerSelection){
+     console.log("Tie");}
+   else if (playerSelection == "rock" && computerSelection == "scissors"){
+     console.log("Player wins");
+     winner = "p"}
+   else if (playerSelection == "scissors" && computerSelection == "paper"){
+     console.log("Player wins");
+     winner = "p"}
+   else if (playerSelection == "paper" && computerSelection == "rock"){
+     console.log("player wins");
+     winner = "p"}
+   else {
+     console.log("Computer wins");
+     winner = "c"}
+   return winner
+  }
+  
+  function getUserInput(){
+    userInput = prompt("choose paper rock or scissors");
+    lowerInput = userInput.toLowerCase()
+    return lowerInput
+  }
+  
+  function game(){
+    let playerScore = 0;
+    let compScore = 0;
+    for (i = 0; i < 5; i++) { 
+      winner = playRound(getUserInput(),computerPlay());
+      console.log(winner);
+      if (winner == "p"){
+        playerScore += 1;}
+      else{ 
+        compScore += 1;}
+    }
+   console.log("Player:" + playerScore + "|" + "Computer:" + compScore)
+  }
+    //let compChoice = computerPlay()
+  //playRound(getUserInput(),computerPlay());
+  game();
   </script>
 </body>
 </html>
