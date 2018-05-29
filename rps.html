@@ -6,10 +6,14 @@
 <body>
   <script>
  function computerPlay(){
+   let choiceArray = ["rock", "paper","scissors"]
+   let randomIndex = Math.floor(Math.random() * choiceArray.length); 
+   let randomElement = textArray[randomIndex];
+   return randomElement
  }
  function playRound(playerSelection, computerSelection){
  }
-    console.log("Hello, World!")
+    console.log(computerPlay())
   </script>
 </body>
 </html>
